@@ -16,7 +16,8 @@ public class App
 
         long a=System.currentTimeMillis();
         ReadText readText = new ReadText();
-        List<Map.Entry<String, Long>> map =  readText.read(small_txt);
+        //List<Map.Entry<String, Long>> map =  readText.read(small_txt);
+        List<Map.Entry<String, Long>> map =  readText.readAsHashMap(small_txt);
         readText.getTopK(map, K);
 
 //这里放需要测试执行时间的代码段。
