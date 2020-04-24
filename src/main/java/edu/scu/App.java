@@ -13,6 +13,9 @@ public class App
     private static final int K = 10;
     public static void main( String[] args )
     {
+        Runtime runtime = Runtime.getRuntime();
+        long preTotalMemory = runtime.totalMemory() / 1024 / 1024;
+
 
         long a=System.currentTimeMillis();
         ReadText readText = new ReadText();
@@ -20,8 +23,14 @@ public class App
         List<Map.Entry<String, Long>> map =  readText.readAsHashMap(small_txt);
         readText.getTopK(map, K);
 
-//这里放需要测试执行时间的代码段。
-        System.out.println("\r<br> 执行耗时 : "+(System.currentTimeMillis()-a)/1000f+" 秒 ");
+        runtime = Runtime.getRuntime();
+
+        long totalMemory = runtime.totalMemory() / 1024 / 1024;
+
+        System.out.println("Memory usage: " + (totalMemory - preTotalMemory) + " M");
+
+
+        System.out.println("running time: "+(System.currentTimeMillis()-a)/1000f+" second ");
 
     }
 
