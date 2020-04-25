@@ -5,8 +5,9 @@ import java.util.*;
 
 public class ReadText {
 
-    public List<Map.Entry<String, Long>> read(String url) {
-        TreeMap<String, Long> map = new TreeMap<String, Long>();
+    // TreeMap
+    public Map<String, Long> read(String url) {
+        Map<String, Long> map = new TreeMap<String, Long>();
         try {
             FileReader f = new FileReader(url);
             char[] c = new char[1];
@@ -32,21 +33,14 @@ public class ReadText {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        List<Map.Entry<String, Long>> list = new ArrayList<Map.Entry<String, Long>>(map.entrySet());
-        Collections.sort(list, new Comparator<Map.Entry<String, Long>>() {
 
-            public int compare(Map.Entry<String, Long> o1, Map.Entry<String, Long> o2) {
-                return o2.getValue().compareTo(o1.getValue());
-            }
-
-        });
-
-        return list;
+        return map;
 
     }
 
-    public List<Map.Entry<String, Long>> readAsHashMap(String url) {
-        HashMap<String, Long> map = new HashMap<String, Long>();
+    // HashMap
+    public Map<String, Long> readAsHashMap(String url) {
+        Map<String, Long> map = new HashMap<String, Long>();
         try {
             FileReader f = new FileReader(url);
             char[] c = new char[1];
@@ -72,6 +66,15 @@ public class ReadText {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
+        return map;
+
+    }
+
+
+    // Sort Firstly
+    public void getTopK(Map<String, Long> map, int K) {
         List<Map.Entry<String, Long>> list = new ArrayList<Map.Entry<String, Long>>(map.entrySet());
         Collections.sort(list, new Comparator<Map.Entry<String, Long>>() {
 
@@ -81,18 +84,35 @@ public class ReadText {
 
         });
 
-        return list;
-
-    }
-
-
-    public void getTopK(List<Map.Entry<String, Long>> list, int K) {
         List<String> res = new ArrayList<>();
 
         for (Map.Entry<String, Long> mapping : list) {
             if (--K < 0) break;
             System.out.println(mapping.getKey() + ":" + mapping.getValue());
         }
+    }
+
+
+    // Get Directly K loops
+    public void getTopKDirectly(Map<String, Long> map, int K) {
+
+        List<String> res = new ArrayList<>();
+
+        for (int i = 0; i < K; i++) {
+            long max = Long.MIN_VALUE;
+            String maxKey = "";
+            for (String key : map.keySet()) {
+                if (map.get(key) > max)  {
+                    maxKey = key;
+                    max = map.get(key);
+                }
+
+            }
+            System.out.println(maxKey+ ":" + max);
+            map.remove(maxKey);
+        }
+
+
     }
 
 }
