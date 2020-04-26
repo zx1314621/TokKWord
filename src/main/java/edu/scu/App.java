@@ -16,10 +16,10 @@ public class App
 
         ReadText readText = new ReadText();
         // Read Save As TreeMap
-        //Map<String, Long> map =  readText.read(small_txt);
+        Map<String, Long> map =  readText.read(small_txt);
 
         // Read Save As HashMap
-        Map<String, Long> map =  readText.readAsHashMap(small_txt);
+        //Map<String, Long> map =  readText.readAsHashMap(medium_txt);
 
         //Sort Firstly, then get TopK
         readText.getTopK(map, K);
