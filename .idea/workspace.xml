@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffe6a3a1-d326-4cda-8299-337d2c44356d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/edu/scu/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/edu/scu/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/edu/scu/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/edu/scu/App.class" afterDir="false" />
-    </list>
+    <list default="true" id="ffe6a3a1-d326-4cda-8299-337d2c44356d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -244,12 +240,12 @@
       <workItem from="1587828617618" duration="1008000" />
       <workItem from="1587832716208" duration="692000" />
       <workItem from="1587834451230" duration="3334000" />
-      <workItem from="1587850964409" duration="4362000" />
+      <workItem from="1587850964409" duration="4366000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13377000" />
+    <option name="totallyTimeSpent" value="13381000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="941" extended-state="6" />
@@ -265,11 +261,11 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32871974" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32871974" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23690476" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23690476" />
       <window_info anchor="bottom" id="Run with VisualVM" order="8" weight="0.37946942" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
